@@ -62,7 +62,17 @@ def most_and_least_common_type(treats):
     >>> most_and_least_common_type(treats)
     ('dessert', 'appetizer')
 
-    Testcase_4: If an empty list is given, return None for both:
+    Testcase_4: In the case that there is a tie for most common treat type, return the first one:
+    >>> treats = [
+    ...     {'type': 'appetizer'},
+    ...     {'type': 'appetizer'},
+    ...     {'type': 'dessert'},
+    ...     {'type': 'dessert'},
+    ... ]
+    >>> most_and_least_common_type(treats)
+    ('appetizer', 'dessert')
+
+    Testcase_5: If an empty list is given, return None for both:
     >>> treats = []
     >>> most_and_least_common_type(treats)
     (None, None)
